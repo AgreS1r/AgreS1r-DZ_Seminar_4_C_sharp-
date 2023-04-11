@@ -1,40 +1,11 @@
-﻿int size = 8;
-double[] numbers = new double[size];
-FillArrayRandomNumbers(numbers);
-Console.WriteLine("Массив: ");
-PrintArray(numbers);
-double min = Int32.MaxValue;
-double max = Int32.MinValue;
+Console.WriteLine("Будет создан массив длиной A в диапвзоне 0-A");
+Console.Write("Введите любое число (A): ");
+Numbers = Convert.ToInt32(Console.ReadLine());
 
-for (int z = 0; z < numbers.Length; z++)
-{
-    if (numbers[z] > max)
-        {
-            max = numbers[z];
-        }
-    if (numbers[z] < min)
-        {
-            min = numbers[z];
-        }
-}
+int[] array = new int[Numbers];
 
-Console.WriteLine($"Всего {numbers.Length} чисел. Максимальное значение = {max}, минимальное значение = {min}");
-Console.WriteLine($"Разница между максимальным и минимальным значением = {max - min}");
-
-void FillArrayRandomNumbers(double[] numbers)
+for (int i = 0; i < Numbers; i++)
 {
-    for(int i = 0; i < numbers.Length; i++)
-        {
-            numbers[i] = Convert.ToDouble(new Random().Next(100,1000)) / 100;
-        }
-}
-void PrintArray(double[] numbers)
-{
-    Console.Write("[ ");
-    for(int i = 0; i < numbers.Length; i++)
-        {
-            Console.Write(numbers[i] + " ");
-        }
-    Console.Write("]");
-    Console.WriteLine();
-}
+    array[i] = new Random().Next(Numbers+1);
+    Console.Write(array[i] + "; ");
+            }
