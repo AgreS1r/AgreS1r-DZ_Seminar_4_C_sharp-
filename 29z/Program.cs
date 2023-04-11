@@ -8,4 +8,4 @@ for (int i = 0; i < Numbers; i++)
 {
     array[i] = new Random().Next(Numbers+1);
     Console.Write(array[i] + "; ");
-            }
+}
